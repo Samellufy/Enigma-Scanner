@@ -1,0 +1,146 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #0B0C10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    letter-spacing: 16px;
+    z-index: 3;
+}
+
+.header_logo {
+    padding: 0;
+    width: 80px;
+    margin-top: 4px;
+    max-height: 70px;
+    font-size: 0;
+    display: inline-block;
+}
+
+.header_logo img {
+    display: block;
+    width: 100%;
+}
+
+.nav-menue {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-right: auto;
+    margin-left: 25px;
+}
+
+.nav-menue img {
+    height: 20px;
+    min-width: 20px;
+    width: 20px;
+    margin-right: 2px;
+    align-items: center;
+    z-index: auto;
+    vertical-align: middle;
+}
+
+.nav-menue span {
+    color: #f9f9f9;
+    font-size: 15px;
+    margin-right: 20px;
+    letter-spacing: 1.42px;
+    line-height: 1.08;
+    padding: 2px 0px;
+    white-space: nowrap;
+    position: relative; 
+}
+
+.nav-menue span:before {
+    background-color: rgb(249, 249, 249);
+    border-radius: 0px 0px 4px 4px;
+    bottom: -6px;
+    content: "";
+    height: 2px;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: all 250ms cubic-bezier(0.25,0.46,0.45,0.94) 0s;
+    visibility: hidden;
+    width: auto;
+}
+
+.nav-menue span:hover:before {
+    transform: scaleX(1);
+    visibility: visible;
+    opacity: 1 !important;
+}
+
+.login-btn button {
+    background-color: rgba(0,0,0,0.6);
+    color: #f9f9f9;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+    transition: all 0.2s ease 0s;
+}
+
+.login-btn button:hover {
+    background-color: #f9f9f9;
+    border-color: transparent;
+    color: #0B0C10;
+}
+
+.userImage {
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.log-out:hover .sign-out,
+.sign-out:hover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sign-out {
+    position: absolute;
+    top: calc(100% - 0px);
+    margin-top: 0px;
+    right: 0;
+    background-color: #295A5B;
+    border: 1px solid #0b6963;
+    border-radius: 4px;
+    box-shadow: #05544f 0px 0px 18px 0px;
+    padding: 10px;
+    font-size: 15px;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease; /* Add transition for smoother appearance */
+}
+
+
+.log-out {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: auto;
+}
