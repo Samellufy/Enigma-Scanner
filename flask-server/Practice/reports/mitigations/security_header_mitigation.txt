@@ -1,0 +1,25 @@
+Mitigations for common web security vulnerabilities often involve a combination of secure coding practices, server configurations, and the use of security headers. Here are some general mitigations for the security headers you mentioned:
+
+1. Strict-Transport-Security (HSTS):
+Mitigation: Ensure that your website is accessible only over HTTPS. Configure HSTS headers with an appropriate max-age directive. Also, consider including subdomains if applicable (includeSubDomains).
+Considerations: Be careful when implementing HSTS, as mistakes can lead to users being unable to access your site if it does not support HTTPS.
+
+2. Content-Security-Policy (CSP):
+Mitigation: Develop a strong CSP policy that restricts the sources of content, scripts, and other resources. Regularly review and update the policy as your website evolves.
+Considerations: Test your CSP thoroughly to ensure it doesn't interfere with the normal operation of your web pages. Use the CSP report feature to receive reports on policy violations.
+
+3. X-Frame-Options:
+Mitigation: Set X-Frame-Options to DENY to prevent your web pages from being embedded in iframes. Alternatively, you can use SAMEORIGIN if your pages need to be embedded only on the same origin.
+Considerations: Evaluate the impact on legitimate uses of iframes on your site. Adjust the setting accordingly.
+
+4. X-Content-Type-Options:
+Mitigation: Set X-Content-Type-Options to nosniff to prevent browsers from MIME-sniffing and interpreting files as a different MIME type than declared.
+Considerations: Ensure that your server is correctly serving the appropriate MIME types for all content.
+
+5. Referrer-Policy:
+Mitigation: Set Referrer-Policy to no-referrer to limit the information included in the HTTP referer header.
+Considerations: Be aware that strict referrer policies may break some legitimate functionality, so test thoroughly.
+
+6. Permissions-Policy:
+Mitigation: Define a restrictive policy using Permissions-Policy to limit access to browser features. Regularly review and update the policy based on your application's requirements.
+Considerations: Test your web pages to ensure that necessary features are not inadvertently restricted. Use the reporting features to monitor policy violations.
