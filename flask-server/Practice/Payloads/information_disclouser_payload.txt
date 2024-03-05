@@ -1,4 +1,0 @@
-server error
-.java
-java.lang
-apache
